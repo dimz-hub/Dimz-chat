@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(30, 30, 30, 0.53);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.chat{
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.sidebar{
+  background-color: rgba(23, 89, 117, 0.76);
+
+}
+.sideNav{
+  background-color: rgba(18, 26, 44, 0.759); 
+
+
+}
+
+.main-chat{
+  display: grid;
+  grid-template-rows: 10% 77% 13%;
+}
+.chatting-page{
+  
+  background-color: rgba(236, 243, 247, 0.21);
+}
+
+.main-nav{
+  background-color: rgba(23, 89, 117, 0.8);
+}
+.message p{
+  background-color: white; 
+  border-radius: 0px 10px 10px 10px;
+}
+.owner{
+  flex-direction: row-reverse;
+}
+.owner p {
+  background-color: rgba(64, 131, 159, 0.92);
+  border-radius: 10px 0px 10px 10px;
+  color: white;
+}
+.chatting-page::-webkit-scrollbar {
+  width: 0.7rem;
+}
+.signup {
+  background-color: rgba(23, 89, 117, 0.76);
+  color: #FFFDFB;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+.signup input{
+  padding: 10px 20px;
+  width: 300px;
+  outline: none;
+}
+
+
