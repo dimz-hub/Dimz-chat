@@ -92,7 +92,7 @@ async function handleSend() {
     <label htmlFor='file'>
     <img  src='images/gallery.png' className='w-[35px] h-[25px]' alt='gallery' />
     </label> 
-    <button  onClick={ handleSend} className='p-1 bg-blue-500 text-white rounded-[5px]'>Send</button>
+    <button  onClick={ ()=> handleSend()} className='p-1 bg-blue-500 text-white rounded-[5px]'>Send</button>
     </div>
    </div>
   )
