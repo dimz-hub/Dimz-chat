@@ -16,6 +16,7 @@ export default function Signup() {
  const [displayName, setDisplayName] = useState("")
  const [file, setFile] = useState(null)
  const [error, setError] = useState(false)
+ const [loading,setLoading] = useState(false)
   
  const navigate = useNavigate()
 
@@ -62,6 +63,7 @@ async function handleSubmit(e) {
           
         }
         );
+        setLoading(true)
         navigate('/chat')
  
 
@@ -106,6 +108,7 @@ return (
            </form>
     <p>You have an Account &#x1F914;, <Link to='/signin' className='font-bold underline'> Login</Link></p> 
             {error && <span>Something went wrong</span>}
+            {loading && <span>Loadind..., Patience is Key </span>}
            </div>
         </div>
       )

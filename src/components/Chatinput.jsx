@@ -27,9 +27,11 @@ async function handleSend() {
         (error) => {
 
         },
+
         async () => {
           const downloadURL = await getDownloadURL(uploadTask.snapshot.ref)
-          await updateDoc(doc(db,'chats',data.chatId), {
+          setTimeout( async () => {
+           await updateDoc(doc(db,'chats',data.chatId), {
             messages : arrayUnion ({
               id:uniqueId,
               senderId:user.uid,
@@ -38,6 +40,7 @@ async function handleSend() {
               img:downloadURL
             })
           })
+         }, 6000)
         }
       )
    } else {
@@ -66,8 +69,8 @@ async function handleSend() {
     
    })
 
-   setImg(null)
    setText('')
+   setImg(null)
   }catch(err) {
     console.log(err.message)
   }
